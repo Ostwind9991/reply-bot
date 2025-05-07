@@ -22,7 +22,10 @@ const onMessage = (ctx: any) => {
             ctx.message.reply_to_message.text.split('<')[1].split('>')[0], 
             ctx.message.text)
     } else {
-        const message = `User <${ctx.message.chat.id}> \n${ctx.message.text}`
+        const from = ctx.message.from
+        const username = from.username ? `@${from.username}` : `${from.first_name || 'Користувач'}`
+        const message = `Повідомлення від ${username} <${ctx.message.chat.id}>:\n\n${ctx.message.text}`
+
         ctx.telegram.sendMessage(
             ctx.message.chat.id, 
             messageAfter)
