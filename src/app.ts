@@ -11,7 +11,7 @@ if (typeof tekon !== "string") throw new Error("Need a token").message
 if (typeof groupId !== "string") throw new Error("Need a group id").message
 
 const welcomeMessage = 'Hi, this is some kind of welcome message' // welcomeMessage 
-const messageAfter = "We'll get back to you as soon as we can" // Messege after client message
+const messageAfter = "Ми відповімо вам найближчим часом." // Messege after client message
 
 const bot = new Telegraf(tekon)
 
