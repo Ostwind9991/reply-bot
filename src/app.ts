@@ -10,7 +10,7 @@ const groupId = process.env.GROUP_ID // grup id
 if (typeof tekon !== "string") throw new Error("Need a token").message
 if (typeof groupId !== "string") throw new Error("Need a group id").message
 
-const welcomeMessage = 'Hi, this is some kind of welcome message' // welcomeMessage 
+const welcomeMessage = 'Доброго дня, раді вам допомогти.' // welcomeMessage 
 const messageAfter = "Ми відповімо вам найближчим часом." // Messege after client message
 
 const bot = new Telegraf(tekon)
